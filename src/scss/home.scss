@@ -160,7 +160,7 @@
   &__container {
   }
 
-  &__mailtitle {
+  &__maintitle {
     @include adaptiveValue("margin-bottom", 70, 40);
   }
 
@@ -265,5 +265,62 @@
 }
 
 //====================================================================================================
+
+.about {
+  @include adaptiveValue("padding-top", 150, 60);
+  @include adaptiveValue("padding-bottom", 95, 40);
+  &__container {
+  }
+
+  &__title {
+    margin-bottom: toRem(20);
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    @media (max-width: $mobile) {
+      margin: 0 toRem(-15);
+    }
+  }
+
+  &__item {
+    padding-left: toRem(5);
+    padding-right: toRem(5);
+    @include adaptiveValue("padding-top", 50, 40, 0, 767, 375);
+    @include adaptiveValue("padding-bottom", 50, 40, 0, 767, 375);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &:nth-child(odd) {
+      border-right: toRem(1) solid #fca311;
+    }
+    &:nth-child(n + 3) {
+      border-top: toRem(1) solid #fca311;
+    }
+    @media (min-width: $tablet) {
+      min-height: toRem(300);
+    }
+  }
+
+  &__item-num {
+    @include adaptiveValue("font-size", 100, 40);
+    font-weight: 500;
+    line-height: 121%; /* 121/100 */
+  }
+
+  &__item-text {
+    @include adaptiveValue("font-size", 40, 25, 0, 1230, 767);
+    @include adaptiveValue("font-size", 25, 18, 1, 767, 375);
+    font-weight: 500;
+    line-height: 120%; /* 48/40 */
+    text-align: center;
+  }
+}
+
 //====================================================================================================
 //====================================================================================================
