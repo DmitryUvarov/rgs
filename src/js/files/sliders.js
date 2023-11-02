@@ -108,16 +108,18 @@ function initSliders() {
 
 	if (document.querySelector('.sreen__slider')) {
 		new Swiper('.sreen__slider', {
-		modules: [Pagination, Autoplay],
+		modules: [Pagination, EffectFade, Autoplay],
 		observer: true,
 		observeParents: true,
 		slidesPerView: 1,
 		spaceBetween: 0,
-		speed: 1,
+		speed: 800,
 		allowTouchMove: false,
 
 		lazyPreloaderClass: 'preloader',
 
+		// Ефекти
+		effect: 'fade',
 		autoplay: {
 			delay: 7000,
 			disableOnInteraction: false,
