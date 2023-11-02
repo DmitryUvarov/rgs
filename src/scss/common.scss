@@ -1,0 +1,54 @@
+// Заголовки, загальні БЕМ блоки та інше...
+
+.title {
+  color: #14213d;
+  font-family: "Inter";
+  @include adaptiveValue("font-size", 40, 30);
+  font-weight: 500;
+  line-height: 120%; /* 48/40 */
+
+  display: flex;
+  align-items: center;
+  column-gap: toRem(20);
+
+  &::after {
+    content: "\e901";
+    @extend %ic;
+    font-size: toRem(30);
+  }
+
+  &_white {
+    color: #f5f5f9;
+  }
+
+  span {
+    color: #fca311;
+    font-weight: 700;
+  }
+}
+
+.title-2 {
+  color: #14213d;
+  font-family: "Inter";
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 122.2%; /* 44/36 */
+
+  display: flex;
+  align-items: center;
+  column-gap: toRem(20);
+
+  &::after {
+    content: "\e901";
+    @extend %ic;
+    font-size: toRem(30);
+  }
+}
+
+.text {
+  color: #14213d;
+  font-family: "Inter";
+  @include adaptiveValue("font-size", 24, 20);
+  font-weight: 400;
+  line-height: 120.8%; /* 29/24 */
+}
