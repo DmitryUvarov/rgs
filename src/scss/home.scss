@@ -108,14 +108,14 @@
 
   &__link-decor {
     position: absolute;
-    @include adaptiveValue("width", 200, 100);
-    @include adaptiveValue("height", 200, 100);
-    @include adaptiveValue("top", -100, -50);
+    @include adaptiveValue("width", 200, 100, 0, 1230, 991);
+    @include adaptiveValue("height", 200, 100, 0, 1230, 991);
+    @include adaptiveValue("top", -100, -50, 0, 1230, 991);
     left: percent(900, 1600);
     background-color: #fff;
     border-radius: 50%;
 
-    @include adaptiveValue("font-size", 100, 45);
+    @include adaptiveValue("font-size", 100, 45, 0, 1230, 991);
     color: #14213d;
 
     display: flex;

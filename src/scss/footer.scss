@@ -1,3 +1,78 @@
 //====================================================================================================
+.footer {
+  background-color: #14213d;
+  @include adaptiveValue("padding-top", 40, 35);
+  @include adaptiveValue("padding-bottom", 100, 35, 0, 1230, 600);
+
+  &__container {
+  }
+
+  &__body {
+    display: grid;
+    gap: toRem(25);
+    grid-template-columns: repeat(2, 1fr);
+
+    @media (max-width: $mobile) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__logo {
+    display: block;
+    @include adaptiveValue("max-width", 104, 95, 0, 767, 375);
+    flex-shrink: 0;
+    transition: all 0.3s ease 0s;
+
+    position: relative;
+    z-index: 6;
+
+    img {
+      max-width: 100%;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  &__adress {
+    @media (min-width: $mobile) {
+      grid-column: 1 / 2;
+      grid-row: 2 / 3;
+    }
+  }
+
+  &__item {
+    color: #fff;
+    font-size: toRem(18);
+    font-weight: 300;
+    line-height: 122.2%; /* 22/18 */
+
+    &:not(:last-child) {
+      margin-bottom: toRem(10);
+    }
+  }
+  a {
+    transition: all 0.3s ease 0s;
+    @media (any-hover: hover) {
+      &:hover {
+        color: #fca311;
+      }
+    }
+  }
+
+  &__link {
+  }
+
+  &__list {
+    @media (min-width: $mobile) {
+      text-align: end;
+      grid-column: 2 / 3;
+      grid-row: 2 / 3;
+    }
+  }
+}
 
 //====================================================================================================
