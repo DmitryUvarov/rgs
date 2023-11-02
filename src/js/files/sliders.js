@@ -131,6 +131,64 @@ function initSliders() {
 			clickable: true,
 		},
 	});
+
+
+	for (const mobileSlider of document.querySelectorAll('.partners__items')) {
+        if (mobileSlider) {
+            (function () {
+                "use strict";
+
+                const breakpoint = window.matchMedia("(min-width:768px)");
+                let slider;
+
+                const enableSwiper = function () {
+                    slider = new Swiper(mobileSlider, {
+                        modules: [Autoplay],
+						observer: true,
+						observeParents: true,
+						slidesPerView: "auto",
+						spaceBetween: 43,
+
+						speed: 2000,
+						loop: true,
+						loopAdditionalSlides: 5,
+						allowTouchMove: false,
+
+						autoplay: {
+							delay: 0,
+							disableOnInteraction: false,
+						},
+						breakpoints: {
+							320: {
+								spaceBetween: 25,
+							},
+							768: {
+								spaceBetween: 30,
+							},
+							992: {
+								spaceBetween: 43,
+							},
+						},
+
+                    });
+                };
+
+                const breakpointChecker = function () {
+                    if (breakpoint.matches === true) {
+                        if (slider !== undefined) slider.destroy(true, true);
+
+                        return;
+                    } else if (breakpoint.matches === false) {
+                        return enableSwiper();
+                    }
+                };
+
+                breakpoint.addListener(breakpointChecker);
+                breakpointChecker();
+            })();
+        }
+
+    }
 }
 
 }

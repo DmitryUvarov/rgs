@@ -155,8 +155,8 @@
 //====================================================================================================
 
 .directions {
-  @include adaptiveValue("padding-top", 150, 60);
-  @include adaptiveValue("padding-bottom", 95, 40);
+  @include adaptiveValue("padding-top", 150, 55);
+  @include adaptiveValue("padding-bottom", 95, 35);
   &__container {
   }
 
@@ -267,8 +267,8 @@
 //====================================================================================================
 
 .about {
-  @include adaptiveValue("padding-top", 150, 60);
-  @include adaptiveValue("padding-bottom", 95, 40);
+  @include adaptiveValue("padding-top", 150, 55);
+  @include adaptiveValue("padding-bottom", 95, 35);
   &__container {
   }
 
@@ -323,4 +323,47 @@
 }
 
 //====================================================================================================
+
+.partners {
+  @include adaptiveValue("padding-top", 95, 35);
+  @include adaptiveValue("padding-bottom", 95, 35);
+  &__container {
+  }
+
+  &__title {
+    @include adaptiveValue("margin-bottom", 70, 40);
+  }
+  &__items {
+  }
+
+  &__wrapper {
+    -webkit-transition-timing-function: linear !important;
+    transition-timing-function: linear !important;
+
+    @media (min-width: $mobile) {
+      &.swiper-wrapper {
+        display: grid;
+        column-gap: toRem(43);
+        row-gap: toRem(50);
+        grid-template-columns: repeat(9, 1fr);
+        grid-template-columns: repeat(auto-fill, minmax(toRem(94), 1fr));
+      }
+    }
+  }
+
+  &__item {
+    width: toRem(100);
+    height: toRem(100);
+    padding: toRem(10);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      max-width: 100%;
+    }
+  }
+}
+
 //====================================================================================================
