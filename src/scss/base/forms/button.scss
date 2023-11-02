@@ -15,12 +15,15 @@
 
   color: #fff;
   font-family: "Inter";
-  font-size: 18px;
+  @include adaptiveValue("font-size", 18, 16);
   font-weight: 500;
   line-height: 122.2%; /* 22/18 */
+  transition: all 0.3s ease 0s;
 
   @media (any-hover: hover) {
     &:hover {
+      color: #fca311;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     }
   }
   &--fw {

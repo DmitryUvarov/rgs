@@ -153,3 +153,117 @@
 }
 
 //====================================================================================================
+
+.directions {
+  @include adaptiveValue("padding-top", 150, 60);
+  @include adaptiveValue("padding-bottom", 95, 40);
+  &__container {
+  }
+
+  &__mailtitle {
+    @include adaptiveValue("margin-bottom", 70, 40);
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: toRem(20);
+
+    @media (max-width: $mobile) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+    position: relative;
+    overflow: hidden;
+    @include adaptiveValue("padding", 30, 20);
+    border-radius: toRem(30);
+    background-color: #f5f5f9;
+
+    @include adaptiveValue("min-height", 290, 220, 0, 1230, 767);
+
+    @media (max-width: em(600)) {
+      min-height: toRem(200);
+    }
+
+    &_big {
+      grid-row: span 2;
+    }
+  }
+
+  &__title {
+    @include adaptiveValue("font-size", 24, 20);
+    font-weight: 400;
+    line-height: 120.8%; /* 29/24 */
+    margin-bottom: toRem(20);
+    z-index: 1;
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: row-reverse;
+    column-gap: toRem(20);
+    transition: all 0.3s ease 0s;
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: #fca311;
+      }
+    }
+
+    &::before {
+      @include adaptiveValue("font-size", 20, 16);
+    }
+  }
+
+  &__button {
+    z-index: 1;
+    position: relative;
+  }
+
+  &__image {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      object-fit: contain;
+      object-position: right;
+    }
+    &_1 {
+      width: percent(270, 605);
+      padding-bottom: percent(205, 605);
+
+      @media (max-width: $mobile) {
+        padding-bottom: 30%;
+      }
+    }
+    &_2 {
+      width: 100%;
+      padding-bottom: percent(597, 605);
+
+      @media (max-width: $mobile) {
+        padding-bottom: 55%;
+      }
+    }
+    &_3 {
+      width: percent(385, 605);
+      padding-bottom: percent(289, 605);
+
+      @media (max-width: $mobile) {
+        padding-bottom: 45%;
+      }
+    }
+  }
+}
+
+//====================================================================================================
+//====================================================================================================
+//====================================================================================================

@@ -3,7 +3,7 @@
 .title {
   color: #14213d;
   font-family: "Inter";
-  @include adaptiveValue("font-size", 40, 30);
+  @include adaptiveValue("font-size", 40, 28);
   font-weight: 500;
   line-height: 120%; /* 48/40 */
 
@@ -14,7 +14,7 @@
   &::after {
     content: "\e901";
     @extend %ic;
-    font-size: toRem(30);
+    @include adaptiveValue("font-size", 22, 18);
   }
 
   &_white {
