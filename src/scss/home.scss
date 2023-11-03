@@ -1,6 +1,6 @@
 //====================================================================================================
 
-.sreen {
+.screen {
   &__container {
   }
 
@@ -12,6 +12,7 @@
   }
 
   &__slide {
+    min-width: 100vw;
     pointer-events: none;
     background-color: #fff;
 

@@ -27,8 +27,8 @@ import "../../scss/base/swiper.scss";
 // Ініціалізація слайдерів
 function initSliders() {
 
-	if (document.querySelector('.sreen__slider')) {
-		new Swiper('.sreen__slider', {
+	if (document.querySelector('.screen__slider')) {
+		new Swiper('.screen__slider', {
 		modules: [Pagination, EffectFade, Autoplay],
 		observer: true,
 		observeParents: true,
@@ -48,7 +48,7 @@ function initSliders() {
 
 
 		pagination: {
-			el: '.sreen__slider .pagination',
+			el: '.screen__slider .pagination',
 			clickable: true,
 		},
 		});
