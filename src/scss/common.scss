@@ -120,3 +120,48 @@
     }
   }
 }
+
+.navigation {
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @include adaptiveValue("column-gap", 20, 10);
+  width: 100%;
+
+  &__button {
+    cursor: pointer;
+    pointer-events: all;
+    @include adaptiveValue("width", 100, 50);
+    @include adaptiveValue("height", 100, 50);
+    border-radius: 50%;
+    background-color: #fff;
+    color: #14213d;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include adaptiveValue("font-size", 30, 20);
+
+    transition: all 0.3s ease 0s;
+
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: #14213d;
+        color: #fff;
+      }
+    }
+
+    &.swiper-button-disabled {
+      cursor: default;
+      opacity: 0.6;
+
+      @media (any-hover: hover) {
+        &:hover {
+          background-color: #fff;
+          color: #14213d;
+        }
+      }
+    }
+  }
+}

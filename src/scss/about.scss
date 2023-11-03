@@ -128,7 +128,7 @@
 //========================================================================================================================================================
 
 .route {
-  @include adaptiveValue("padding-top", 125, 40);
+  @include adaptiveValue("padding-top", 95, 35);
   @include adaptiveValue("padding-bottom", 95, 35);
 
   &__title {
@@ -184,6 +184,52 @@
     @media (any-hover: hover) {
       &:hover {
         color: #fca311;
+      }
+    }
+  }
+}
+
+//========================================================================================================================================================
+
+.photo {
+  @include adaptiveValue("padding-top", 95, 35);
+  @include adaptiveValue("padding-bottom", 95, 35);
+
+  &__title {
+    @include adaptiveValue("margin-bottom", 70, 35);
+  }
+  &__slider {
+    position: relative;
+  }
+
+  &__wrapper {
+  }
+
+  &__slide-ibg {
+    padding-bottom: 50%;
+    @include adaptiveValue("border-radius", 30, 10);
+    overflow: hidden;
+
+    @media (max-width: $mobile) {
+      padding-bottom: 70%;
+    }
+  }
+
+  &__navigation {
+    @media (min-width: $mobile) {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: toRem(20);
+      right: toRem(20);
+      width: calc(100% - toRem(40));
+    }
+    @media (max-width: $mobile) {
+      margin-top: toRem(20);
+      justify-content: flex-end;
+
+      .navigation__button {
+        border: toRem(1) solid #14213d;
       }
     }
   }
