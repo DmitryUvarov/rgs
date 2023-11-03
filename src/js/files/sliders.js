@@ -51,11 +51,11 @@ function initSliders() {
 			el: '.sreen__slider .pagination',
 			clickable: true,
 		},
-	});
+		});
 
 
 
-}
+	}
 
 
 for (const mobileSlider of document.querySelectorAll('.partners__items')) {
@@ -115,6 +115,50 @@ for (const mobileSlider of document.querySelectorAll('.partners__items')) {
 
 }
 
+
+
+if (document.querySelector('.route__slider')) {
+	new Swiper('.route__slider', {
+		modules: [Pagination,  Autoplay],
+		observer: true,
+		observeParents: true,
+		speed: 800,
+
+		lazyPreloaderClass: 'preloader',
+
+		autoplay: {
+			delay: 3000,
+			disableOnInteraction: false,
+		},
+
+		pagination: {
+			el: '.route__slider .pagination',
+			clickable: true,
+		},
+
+		breakpoints: {
+			320: {
+				slidesPerView: 1.2,
+				spaceBetween: 15,
+			},
+			600: {
+				slidesPerView: 2.2,
+				spaceBetween: 15,
+			},
+			768: {
+				slidesPerView: 2.5,
+				spaceBetween: 20,
+			},
+			992: {
+				slidesPerView: 3,
+				spaceBetween: 20,
+			},
+		},
+	});
+
+
+
+}
 }
 // Скролл на базі слайдера (за класом swiper scroll для оболонки слайдера)
 function initSlidersScroll() {
