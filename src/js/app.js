@@ -42,7 +42,7 @@ flsFunctions.menuInit();
 /* Форматування чисел */
 // import './libs/wNumb.min.js';
 
-flsFunctions.getHeaderHeight();
+flsFunctions.getHeaderHeight('.header');
 
 /*
 Модуль "Спойлери"

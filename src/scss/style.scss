@@ -153,3 +153,7 @@ body {
 @import "home";
 @import "about";
 @import "product";
+
+.page {
+  padding-top: var(--header-height);
+}

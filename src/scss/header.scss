@@ -2,6 +2,26 @@
 .header {
   position: relative;
 
+  background-color: #fff;
+  transition:
+    top 0.5s 0s,
+    background-color 0.5s,
+    opacity 1.5s 0s;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 5;
+
+  &._header-scroll {
+    top: calc(var(--header-height) * -1);
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+
+  &._header-show {
+    top: 0;
+  }
+
   @media (max-width: $mobile) {
     &::before {
       content: "";
@@ -24,6 +44,7 @@
       transition: all 0.3s ease 0.3s;
     }
   }
+
   &__container {
   }
 

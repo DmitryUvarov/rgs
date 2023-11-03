@@ -717,8 +717,8 @@ export function dataMediaQueries(array, dataSetValue) {
 		}
 	}
 }
-export function getHeaderHeight() {
-	const headerHeight = document?.querySelector('.header').offsetHeight;
+export function getHeaderHeight(selector = '.header') {
+	const headerHeight = document?.querySelector(selector).offsetHeight;
 	document.querySelector(':root').style.setProperty('--header-height', `${headerHeight}px`);
   }
 //================================================================================================================================================================================================================================================================================================================
