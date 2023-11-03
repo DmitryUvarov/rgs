@@ -1,8 +1,8 @@
 //====================================================================================================
 .footer {
   background-color: #14213d;
-  @include adaptiveValue("padding-top", 40, 35);
-  @include adaptiveValue("padding-bottom", 100, 35, 0, 1230, 600);
+  @include adaptiveValue("padding-top", 40, 45);
+  @include adaptiveValue("padding-bottom", 100, 50, 0, 1230, 600);
 
   &__container {
   }
