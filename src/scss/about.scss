@@ -38,6 +38,8 @@
     &::after {
       display: none;
     }
+
+    max-width: toRem(930);
   }
 
   &__link {

@@ -24,7 +24,7 @@
   @media (any-hover: hover) {
     &:hover {
       color: #fca311;
-      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      box-shadow: rgba(100, 100, 111, 0.4) 0px 7px 29px 0px;
     }
   }
 
@@ -36,6 +36,7 @@
       &:hover {
         color: #fff;
         background-color: #14213d;
+        box-shadow: rgba(100, 100, 111, 0.4) 0px 7px 29px 0px;
       }
     }
   }

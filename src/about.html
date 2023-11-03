@@ -6,7 +6,7 @@
 
 <body>
     <div class="wrapper">
-        @@include('html/_header.htm',{})
+        @@include('html/_header-noemail.htm',{})
         <main class="page">
 
             <section class="hero">
@@ -57,46 +57,10 @@
                             </div>
                         </div>
                     </div>
-                    <!-- <div class="why__items">
-                        <div class="why__item item-why item-why_yellow">
-                            <div class="item-why__text text">
-                                <p>Специализируемся на поставке промышленного сырья,
-                                    комплексных систем и моноингредиентов для
-                                    пищевой промышленности</p>
-                            </div>
-                        </div>
-                        <div class="why__item item-why">
-                            <div class="item-why__text text">
-                                <p>Выполним любую тематическую заявку точно в срок и с гарантией качества</p>
-                            </div>
-                        </div>
-                        <div class="why__item item-why item-why_blue">
-                            <div class="item-why__text text">
-                                <p>Наша продукция максимально экономически выгодна для покупателя</p>
-                            </div>
-                        </div>
-                    </div> -->
                 </div>
             </section>
 
-            <section class="partners">
-                <div class="partners__container">
-                    <h2 class="partners__title title">Наши партнеры</h2>
-                    <div class="partners__items">
-                        <div class="partners__wrapper swiper-wrapper">
-                            <div class="partners__item swiper-slide"><img src="@img/partners/01.png" alt=""></div>
-                            <div class="partners__item swiper-slide"><img src="@img/partners/02.png" alt=""></div>
-                            <div class="partners__item swiper-slide"><img src="@img/partners/03.png" alt=""></div>
-                            <div class="partners__item swiper-slide"><img src="@img/partners/04.png" alt=""></div>
-                            <div class="partners__item swiper-slide"><img src="@img/partners/05.png" alt=""></div>
-                            <div class="partners__item swiper-slide"><img src="@img/partners/06.png" alt=""></div>
-                            <div class="partners__item swiper-slide"><img src="@img/partners/07.png" alt=""></div>
-                            <div class="partners__item swiper-slide"><img src="@img/partners/08.png" alt=""></div>
-                            <div class="partners__item swiper-slide"><img src="@img/partners/09.png" alt=""></div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            @@include('html/_partners.htm',{})
 
             <section class="route">
                 <div class="route__container">

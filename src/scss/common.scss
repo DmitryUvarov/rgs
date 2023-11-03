@@ -31,6 +31,7 @@
   color: #14213d;
   font-family: "Inter";
   font-size: 36px;
+  @include adaptiveValue("font-size", 36, 24);
   font-weight: 400;
   line-height: 122.2%; /* 44/36 */
 
@@ -41,7 +42,7 @@
   &::after {
     content: "\e901";
     @extend %ic;
-    font-size: toRem(30);
+    @include adaptiveValue("font-size", 20, 16);
   }
 }
 

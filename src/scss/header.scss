@@ -239,12 +239,14 @@
       }
     }
 
-    &.active {
-      &::before {
-        opacity: 1;
-      }
-      &::after {
-        display: none;
+    @media (min-width: $mobile) {
+      &.active {
+        &::before {
+          opacity: 1;
+        }
+        &::after {
+          display: none;
+        }
       }
     }
   }
