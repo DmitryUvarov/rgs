@@ -1,0 +1,33 @@
+.about-block {
+  @include adaptiveValue("padding-top", 125, 40);
+  @include adaptiveValue("padding-bottom", 95, 35);
+
+  &__body {
+    display: grid;
+    align-items: flex-start;
+    gap: toRem(20);
+
+    @media (min-width: $tablet) {
+      grid-template-columns: 1fr percent(575, 1200);
+    }
+    @media (max-width: $tablet) {
+      grid-template-columns: auto 1fr;
+      gap: toRem(30);
+    }
+    @media (max-width: $mobile) {
+      grid-template-columns: 1fr;
+      gap: toRem(20);
+    }
+  }
+
+  &__title {
+  }
+
+  &__text {
+    p {
+      &:not(:last-child) {
+        @include adaptiveValue("margin-bottom", 30, 15);
+      }
+    }
+  }
+}
