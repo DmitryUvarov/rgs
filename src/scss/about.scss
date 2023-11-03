@@ -1,0 +1,40 @@
+.hero {
+  position: relative;
+  &__container {
+  }
+
+  &__body {
+    @include adaptiveValue("padding-top", 125, 55);
+    @include adaptiveValue("padding-bottom", 175, 100);
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    @media (min-width: $tablet) {
+      min-height: toRem(740);
+    }
+    @media (max-width: $tablet) {
+      min-height: calc(100svh - var(--header-height));
+    }
+  }
+
+  &__title {
+    @include adaptiveValue("margin-bottom", 30, 20);
+  }
+
+  &__text {
+    max-width: toRem(575);
+  }
+
+  &__bg-ibg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+  }
+}
