@@ -145,6 +145,16 @@
   }
 
   &__items {
+    display: grid;
+    gap: toRem(20);
+    row-gap: toRem(30);
+    grid-template-columns: repeat(auto-fill, minmax(toRem(300), 1fr));
+
+    .card__title {
+      &::after {
+        display: none;
+      }
+    }
   }
 
   &__pagination {
