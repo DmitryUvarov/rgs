@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"О нас"
+})
+
+<body>
+    <div class="wrapper">
+        @@include('html/_header.htm',{})
+        <main class="page">
+
+            <section class="hero">
+                <div class="hero__container">
+                    <div class="hero__body">
+                        <h1 class="hero__maintitle">Строительные добавки</h1>
+
+                        <div class="hero__subtitle title title_white">Наша продукция залог качества!</div>
+
+                        <a href="#" class="hero__link button button_yellow">Перейти в каталог</a>
+                    </div>
+                </div>
+                <div class="hero__bg-ibg"><img src="@img/hero/02.jpg" alt=""></div>
+            </section>
+
+
+
+            <section class="route">
+                <div class="route__container">
+                    <h2 class="route__title title">Наши направления</h2>
+
+                    <div class="route__items">
+                        <div class="card">
+                            <a href="#" class="card__image-ibg">
+                                <img src="@img/card/05.jpg" alt="" loading="lazy">
+                            </a>
+                            <h4 class="card__title title-3"><a href="#">Наша продукция использовалась при строительстве “Uzbekistan GTL”</a></h4>
+                        </div>
+                        <div class="card">
+                            <a href="#" class="card__image-ibg">
+                                <img src="@img/card/06.jpg" alt="" loading="lazy">
+                            </a>
+                            <h4 class="card__title title-3"><a href="#">Наши добавки успешно применяют в строительстве бетонных дорог</a></h4>
+                        </div>
+                        <div class="card">
+                            <a href="#" class="card__image-ibg">
+                                <img src="@img/card/07.jpg" alt="" loading="lazy">
+                            </a>
+                            <h4 class="card__title title-3"><a href="#">Наша продукция использовалась при строительстве “Humo Arena”</a></h4>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- ca  -->
+
+            @@include('html/_photo.htm',{})
+
+            @@include('html/_contact.htm',{})
+
+        </main>
+        @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_js.htm',{})
+</body>
+
+</html>

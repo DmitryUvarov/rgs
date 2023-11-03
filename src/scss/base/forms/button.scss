@@ -5,6 +5,7 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
+  @include adaptiveValue("column-gap", 20, 10);
   padding: 0px toRem(20);
 
   border-radius: toRem(10);
@@ -24,6 +25,18 @@
     &:hover {
       color: #fca311;
       box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+  }
+
+  &_yellow {
+    background-color: #fca311;
+    color: #14213d;
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: #fff;
+        background-color: #14213d;
+      }
     }
   }
   &--fw {

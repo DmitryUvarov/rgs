@@ -25,6 +25,32 @@
     @include adaptiveValue("margin-bottom", 30, 20);
   }
 
+  &__maintitle {
+    margin-bottom: toRem(20);
+    color: #f5f5f9;
+    @include adaptiveValue("font-size", 80, 40);
+    font-weight: 500;
+    line-height: 121.2%; /* 97/80 */
+    text-transform: uppercase;
+  }
+
+  &__subtitle {
+    &::after {
+      display: none;
+    }
+  }
+
+  &__link {
+    width: max-content;
+    @include adaptiveValue("margin-top", 70, 35);
+
+    &::after {
+      content: "\e901";
+      @extend %ic;
+      @include adaptiveValue("font-size", 21, 18);
+    }
+  }
+
   &__text {
     max-width: toRem(575);
   }

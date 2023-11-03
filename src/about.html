@@ -159,74 +159,9 @@
                 </div>
             </section>
 
-            <section class="photo">
-                <div class="photo__container">
-                    <h2 class="photo__title title">Фотогалерея</h2>
-                    <div class="photo__slider swiper">
-                        <div class="photo__wrapper swiper-wrapper">
-                            <div class="photo__slide-ibg swiper-slide">
-                                <img src="@img/card/01.jpg" alt="" loading="lazy">
-                                <div class="preloader"></div>
-                            </div>
-                            <div class="photo__slide-ibg swiper-slide">
-                                <img src="@img/card/02.jpg" alt="" loading="lazy">
-                                <div class="preloader"></div>
-                            </div>
-                            <div class="photo__slide-ibg swiper-slide">
-                                <img src="@img/card/03.jpg" alt="" loading="lazy">
-                                <div class="preloader"></div>
-                            </div>
-                        </div>
-                        <div class="photo__navigation navigation">
-                            <div class="navigation__button _icon-prev button-prev"></div>
-                            <div class="navigation__button _icon-next button-next"></div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            @@include('html/_photo.htm',{})
 
-            <section class="contact">
-                <div class="contact__container">
-                    <h2 class="contact__title title">Наши контакты</h2>
-                    <div class="contact__items">
-                        <div class="contact__item text">
-                            <div>г. Ташкента, Юнусабадский р-н., ул. Богиравон, д. 39</div>
-                            <a href="tel:+998712267371">+998 (71) 226-73-71</a>
-                        </div>
-                        <div class="contact__item text">
-                            <div>г. Ташкент, ул. Уста-Ширин 119</div>
-                            <a href="tel:+998712267371">+998 (71) 226-73-71</a>
-                        </div>
-                        <div class="contact__item text">
-                            <div>г. Ташкент, ул. Уста-Ширин 119</div>
-                            <a href="tel:+998712267371">+998 (71) 226-73-71</a>
-                        </div>
-                        <div class="contact__item text">
-                            <div>г. Ташкент, ул. Уста-Ширин 119</div>
-                            <a href="tel:+998712267371">+998 (71) 226-73-71</a>
-                        </div>
-                        <div class="contact__item text">
-                            <div>г. Ташкент, ул. Уста-Ширин 119</div>
-                            <a href="tel:+998712267371">+998 (71) 226-73-71</a>
-                        </div>
-                    </div>
-                    <div class="contact__body text">
-                        <a href="mailto:ceo@rgs.com.uz">ceo@rgs.com.uz</a>
-                        <a href="mailto:info@rgs.com.uz">info@rgs.com.uz</a>
-                        <a href="mailto:food@rgs.com.uz">food@rgs.com.uz</a>
-                        <a href="mailto:sales@rgs.com.uz">sales@rgs.com.uz</a>
-                        <a href="mailto:director@rgs.com.uz">director@rgs.com.uz</a>
-                    </div>
-                </div>
-            </section>
-
-            <!-- <section class="test">
-				<div class="test__container">
-					<div class="test__body">
-
-					</div>
-				</div>
-			</section> -->
+            @@include('html/_contact.htm',{})
 
         </main>
         @@include('html/_footer.htm',{})
