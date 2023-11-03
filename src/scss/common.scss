@@ -9,7 +9,7 @@
 
   display: flex;
   align-items: center;
-  column-gap: toRem(20);
+  @include adaptiveValue("column-gap", 20, 10);
 
   &::after {
     content: "\e901";
@@ -36,7 +36,7 @@
 
   display: flex;
   align-items: center;
-  column-gap: toRem(20);
+  @include adaptiveValue("column-gap", 20, 10);
 
   &::after {
     content: "\e901";
