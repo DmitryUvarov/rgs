@@ -51,7 +51,7 @@ function pageLoad() {
             const menuItem = event.target.closest('.header__item')
             const cordsMenuItem = menuItem.getBoundingClientRect()
 
-            if ((htmlTag.clientWidth - cordsMenuItem.right) > 180) {
+            if ((htmlTag.clientWidth - cordsMenuItem.right) > 450) {
                 menuItem.querySelector('.header__sub-list').style.cssText = 'left: 0; right: auto;'
             } else {
                 menuItem.querySelector('.header__sub-list').style.cssText = 'right: 0; left: auto;'

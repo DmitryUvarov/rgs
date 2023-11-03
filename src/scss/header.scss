@@ -238,6 +238,15 @@
         transform: rotate(180deg);
       }
     }
+
+    &.active {
+      &::before {
+        opacity: 1;
+      }
+      &::after {
+        display: none;
+      }
+    }
   }
 
   &__sub-list {
@@ -351,8 +360,6 @@
       &:hover {
         color: #fca311;
       }
-    }
-    .active {
     }
   }
 }
