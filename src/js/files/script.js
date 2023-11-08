@@ -35,21 +35,10 @@ function pageLoad() {
 
     })
 
-    document.addEventListener('beforegotoBlock', (e) => {
-        let openSubMenu = document.querySelector('.header__item.open')
-
-        if (openSubMenu) {
-            openSubMenu.classList.remove('open')
-        }
-    })
-
-
     const menu = document.querySelector('.header__list')
     if (menu) {
         menu.addEventListener('mouseover', menuHover)
     }
-
-
 
     function menuHover(event) {
         if (event.target.closest('.header__item') && event.target.closest('.header__item').querySelector('.header__sub-list')) {
