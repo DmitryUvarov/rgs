@@ -44,10 +44,11 @@
   }
 
   &__title {
-    @include adaptiveValue("margin-bottom", 100, 45);
+    @include adaptiveValue("margin-bottom", 60, 25);
   }
 
   &__subtitle {
+    @include adaptiveValue("padding-top", 40, 20);
     @include adaptiveValue("margin-bottom", 70, 35);
 
     @media (max-width: $mobile) {

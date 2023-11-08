@@ -22,11 +22,7 @@ function pageLoad() {
 
 
             if (openItem && !targetElement.closest('.header__item.open')) {
-                console.log('1');
                 openItem.classList.remove('open')
-            } else if (targetElement.closest('.header__item.open')) {
-                console.log('has open class');
-                console.log('2');
             }
             if (!targetElement.closest('.header__item.open')) {
                 e.preventDefault()
@@ -39,11 +35,20 @@ function pageLoad() {
 
     })
 
+    document.addEventListener('beforegotoBlock', (e) => {
+        let openSubMenu = document.querySelector('.header__item.open')
+
+        if (openSubMenu) {
+            openSubMenu.classList.remove('open')
+        }
+    })
+
 
     const menu = document.querySelector('.header__list')
     if (menu) {
         menu.addEventListener('mouseover', menuHover)
     }
+
 
 
     function menuHover(event) {

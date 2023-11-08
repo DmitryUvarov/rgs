@@ -50,6 +50,16 @@ export let gotoBlock = (targetBlock, noHeader = false, speed = 500, offsetTop = 
 			});
 		}
 		FLS(`[gotoBlock]: Юхуу...їдемо до ${targetBlock}`);
+
+		// Створюємо свою подію після gotoBlock
+		setTimeout(() => {
+			document.dispatchEvent(new CustomEvent("beforegotoBlock", {
+				detail: {
+					gotoBlock: targetBlockElement
+				}
+			}));
+		}, speed);
+
 	} else {
 		FLS(`[gotoBlock]: Йой... Такого блоку немає на сторінці: ${targetBlock}`);
 	}
