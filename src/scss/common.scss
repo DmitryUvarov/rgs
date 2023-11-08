@@ -44,6 +44,10 @@
     @extend %ic;
     @include adaptiveValue("font-size", 20, 16);
   }
+
+  &_white {
+    color: #f5f5f9;
+  }
 }
 
 .title-3 {
