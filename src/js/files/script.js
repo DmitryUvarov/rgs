@@ -12,13 +12,14 @@ function pageLoad() {
 
         const targetElement = e.target
 
+        let menuItem = targetElement.closest('.header__item')
         let openItem = document.querySelector('.header__item.open')
 
         if (!targetElement.closest('.header__item.open') && openItem) {
             document.querySelector('.header__item.open').classList.remove('open')
         }
 
-        if(targetElement.closest('.header__item') && htmlTag.closest('.touch')) {
+        if(menuItem && menuItem.querySelector('.header__sub-list') && htmlTag.closest('.touch')) {
 
 
             if (openItem && !targetElement.closest('.header__item.open')) {
@@ -28,9 +29,22 @@ function pageLoad() {
                 e.preventDefault()
             }
 
-            targetElement.closest('.header__item').classList.add('open')
+            menuItem.classList.add('open')
         }
 
+        ///////////////
+
+
+        if (targetElement.closest('.language')) {
+            let language = targetElement.closest('.language')
+
+            language.classList.toggle('open')
+        }
+
+        if (!targetElement.closest(".language") && document.querySelector('.language.open')) {
+            let language = document.querySelector('.language')
+            language.classList.remove('open')
+        }
 
 
     })

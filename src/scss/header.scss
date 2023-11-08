@@ -240,7 +240,7 @@
       transition: all 0.3s ease 0s;
     }
 
-    &::after {
+    .header__item_arrow &::after {
       content: "\e900";
       @extend %ic;
       font-size: toRem(11);
@@ -321,6 +321,109 @@
 
     transition: all 0.3s ease 0s;
 
+    @media (any-hover: hover) {
+      &:hover {
+        color: #fca311;
+      }
+    }
+  }
+
+  &__language {
+  }
+}
+
+.language {
+  position: relative;
+
+  @media (max-width: $mobile) {
+    margin-top: toRem(20);
+  }
+
+  &__body {
+    font-weight: 300;
+
+    @media (any-hover: hover) {
+      &:hover {
+        .language__list {
+          top: calc(100% + toRem(10));
+          opacity: 1;
+          visibility: visible;
+          pointer-events: all;
+        }
+        .language__current::after {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+
+  &__current {
+    display: flex;
+    align-items: center;
+    column-gap: toRem(5);
+
+    &::after {
+      content: "\e900";
+      @extend %ic;
+      font-size: toRem(11);
+      color: #848c8e;
+      transition: all 0.3s ease 0s;
+
+      .open & {
+        transform: rotate(180deg);
+      }
+    }
+    &._spoller-active::after {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__list {
+    @media (min-width: $mobile) {
+      position: absolute;
+      min-width: toRem(50);
+      top: calc(100% + toRem(20));
+      left: 0;
+      padding: toRem(5) toRem(10);
+      background-color: #fff;
+      z-index: 2;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+      transition: all 0.3s ease 0s;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: toRem(15);
+        top: toRem(-15);
+        left: 0;
+      }
+
+      .open & {
+        top: calc(100% + toRem(10));
+        opacity: 1;
+        visibility: visible;
+        pointer-events: all;
+      }
+    }
+
+    @media (max-width: $mobile) {
+      margin-top: toRem(15);
+    }
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: toRem(15);
+    }
+  }
+
+  &__link {
+    transition: all 0.3s ease 0s;
     @media (any-hover: hover) {
       &:hover {
         color: #fca311;

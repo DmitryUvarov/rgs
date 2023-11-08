@@ -14,12 +14,18 @@
                     <div class="hero__body">
                         <h1 class="hero__maintitle">Top sweets</h1>
 
-                        <div class="hero__subtitle title title_white">Широкий ассортимент кондитерских изделий</div>
+                        <div class="hero__subtitle title title_white">Широкий ассортимент <br> кондитерских изделий</div>
 
                         <a href="#" class="hero__link button button_yellow">Перейти в каталог</a>
                     </div>
                 </div>
-                <div class="hero__bg-ibg"><img src="@img/hero/04.jpg" alt=""></div>
+                <div class="hero__bg-ibg hero__bg-ibg_top">
+                    <picture>
+                        <source srcset="img/hero/small04.jpg" type="image/webp" media="(max-width:600px)">
+                        <source srcset="img/hero/04.jpg" type="image/webp">
+                        <img src="@img/hero/04.jpg" alt="">
+                    </picture>
+                </div>
             </section>
 
             <section class="about-block">
