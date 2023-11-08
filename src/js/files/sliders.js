@@ -76,7 +76,7 @@ for (const mobileSlider of document.querySelectorAll('.partners__items')) {
 
 					speed: 2000,
 					loop: true,
-					loopAdditionalSlides: 5,
+					loopAdditionalSlides: 3,
 					allowTouchMove: false,
 
 					autoplay: {
