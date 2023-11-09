@@ -19,6 +19,13 @@
     @media (max-width: $tablet) {
       min-height: calc(100svh - var(--header-height));
     }
+
+    &_space {
+      padding-top: toRem(95);
+      .hero__subtitle {
+        margin-top: auto;
+      }
+    }
   }
 
   &__title {
