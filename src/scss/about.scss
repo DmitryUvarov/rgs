@@ -21,7 +21,7 @@
     }
 
     &_space {
-      @include adaptiveValue("padding-top", 95, 95);
+      padding-top: toRem(95) !important;
       .hero__subtitle {
         margin-top: auto;
       }
