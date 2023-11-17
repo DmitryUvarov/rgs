@@ -2,9 +2,11 @@
 .footer {
   background-color: #14213d;
   @include adaptiveValue("padding-top", 40, 45);
-  @include adaptiveValue("padding-bottom", 100, 50, 0, 1230, 600);
+  @include adaptiveValue("padding-bottom", 80, 50, 0, 1230, 600);
 
   &__container {
+    display: grid;
+    @include adaptiveValue("gap", 40, 20);
   }
 
   &__body {
@@ -68,6 +70,20 @@
       text-align: end;
       grid-column: 2 / 3;
       grid-row: 2 / 3;
+    }
+  }
+
+  &__copy {
+    color: #fff;
+    line-height: 125%;
+    @include adaptiveValue("font-size", 18, 16);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media (max-width: $mobile) {
+      flex-direction: column;
     }
   }
 }
