@@ -74,6 +74,8 @@
 }
 
 .item-catalog {
+  display: flex;
+  flex-direction: column;
   &__image-ibg {
     border-radius: toRem(30);
     background: #f5f5f9;
@@ -111,6 +113,7 @@
   }
 
   &__text {
+    flex: 1 1 auto;
     color: #848c8e;
   }
 
