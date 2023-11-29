@@ -28,6 +28,15 @@
     }
   }
 
+  &__ico {
+    @include adaptiveValue("max-width", 153, 50);
+    margin-bottom: toRem(15);
+
+    img {
+      max-width: 100%;
+    }
+  }
+
   &__title {
     @include adaptiveValue("margin-bottom", 30, 20);
   }
